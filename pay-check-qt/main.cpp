@@ -1,11 +1,14 @@
 #include "mainwindow.h"
-#include <QApplication>
-
+#include <application.h>
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    Application app(argc, argv);
+
     MainWindow w;
+#ifdef Q_OS_MAC
+    w.setWindowIcon(QIcon("../icons/AppIcon.icns"));
+#endif
     w.show();
 
-    return a.exec();
+    return app.exec();
 }
