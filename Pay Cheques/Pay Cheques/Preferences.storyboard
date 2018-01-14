@@ -29,7 +29,7 @@
         <!--Tab View Controller-->
         <scene sceneID="w6w-Wt-rZ4">
             <objects>
-                <tabViewController id="1Kt-1O-m52" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="1" id="1Kt-1O-m52" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="Yi4-aB-Cjm"/>
                         <tabViewItem identifier="" id="99g-Pd-eZr"/>
@@ -66,13 +66,26 @@
             </objects>
             <point key="canvasLocation" x="-223" y="662"/>
         </scene>
-        <!--View Controller-->
+        <!--Sync Preferences-->
         <scene sceneID="agH-Pd-iY8">
             <objects>
-                <viewController id="ubW-UF-9yX" sceneMemberID="viewController">
+                <viewController title="Sync Preferences" id="ubW-UF-9yX" customClass="SyncPreferencesViewController" customModule="Pay_Cheques" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3du-pV-e80">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFV-MB-jhC">
+                                <rect key="frame" x="175" y="142" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LFH-ha-EA0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dropboxAutherizationWithSender:" target="ubW-UF-9yX" id="spG-sT-KXP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="uMX-u5-goQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
