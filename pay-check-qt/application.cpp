@@ -8,6 +8,7 @@ Application::Application(int &argc, char **argv):QApplication(argc, argv, true)
         QMessageBox::critical(0, "Error", "Application allready running");
         exit(1);
     }
+    setApplicationVersion(APP_VERSION);
 }
 
 Application::~Application()

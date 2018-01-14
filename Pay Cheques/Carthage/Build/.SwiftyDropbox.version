@@ -1,0 +1,9 @@
+{
+  "commitish" : "4.3.0",
+  "Mac" : [
+    {
+      "name" : "SwiftyDropbox",
+      "hash" : "807b94e03149f503af0feca5341b3313e8600e706b4c28fb68c3f7e48d3574eb"
+    }
+  ]
+}

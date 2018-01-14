@@ -1,5 +1,6 @@
 #include "preferencesdialog.h"
 #include "ui_preferencesdialog.h"
+#include "authdialog.h"
 
 PreferencesDialog::PreferencesDialog(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,9 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
 PreferencesDialog::~PreferencesDialog()
 {
     delete ui;
+}
+
+void PreferencesDialog::on_pushButton_clicked()
+{
+    AuthDialog(this).exec();
 }

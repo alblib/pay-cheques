@@ -3,11 +3,9 @@
 int main(int argc, char *argv[])
 {
     Application app(argc, argv);
-
+    app.setApplicationName("Pay Cheques");
+    app.setApplicationDisplayName("Pay Cheques");
     MainWindow w;
-#ifdef Q_OS_MAC
-    w.setWindowIcon(QIcon("../icons/AppIcon.icns"));
-#endif
     w.show();
 
     return app.exec();

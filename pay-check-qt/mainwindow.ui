@@ -35,8 +35,16 @@
     </property>
     <addaction name="action_Preferences"/>
    </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
+   <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -51,16 +59,29 @@
    <property name="text">
     <string>&amp;Preferences</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+,</string>
-   </property>
   </action>
   <action name="action_Quit">
    <property name="text">
     <string>&amp;Quit</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>&amp;Help</string>
+   </property>
    <property name="shortcut">
-    <string>Ctrl+Q</string>
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F1</string>
    </property>
   </action>
  </widget>

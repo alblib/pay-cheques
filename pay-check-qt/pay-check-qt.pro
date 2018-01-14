@@ -7,11 +7,21 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += webenginewidgets network networkauth
 
 TARGET = pay-check-qt
 TEMPLATE = app
 
-macx:ICON = ../icons/AppIcon.icns
+macx:ICON = icons/AppIcon.icns
+
+
+VERSION = 0.4.0.1
+QMAKE_TARGET_COMPANY = "Protelum Liberium"
+QMAKE_TARGET_PRODUCT = "Pay Cheques"
+QMAKE_TARGET_DESCRIPTION = "description"
+QMAKE_TARGET_COPYRIGHT = "Albertus Liberius"
+
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -32,7 +42,9 @@ SOURCES += \
     preferencesdialog.cpp \
     koreancardissuer.cpp \
     PaymentDayElement.cpp \
-    cardissuerlist.cpp
+    cardissuerlist.cpp \
+    aboutdialog.cpp \
+    authdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,8 +52,19 @@ HEADERS += \
     preferencesdialog.h \
     koreancardissuer.h \
     PaymentDayElement.h \
-    cardissuerlist.h
+    cardissuerlist.h \
+    aboutdialog.h \
+    authdialog.h
 
 FORMS += \
         mainwindow.ui \
-    preferencesdialog.ui
+    preferencesdialog.ui \
+    aboutdialog.ui \
+    authdialog.ui
+
+DISTFILES += \
+    icons/AppIcon.icns \
+    AuthWindow.qml
+
+RESOURCES += \
+    appicon.qrc

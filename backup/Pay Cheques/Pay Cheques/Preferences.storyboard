@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bcv-0o-9tP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Fdf-WK-BOP">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="bcv-0o-9tP" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="preferencePanel" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="J8r-4F-vNw">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="bcv-0o-9tP" id="em4-pw-viv"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="DMp-Zg-328" kind="relationship" relationship="window.shadowedContentViewController" id="qQ1-tB-YtY"/>
+                    </connections>
+                </windowController>
+                <customObject id="QIG-5Y-imR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="140"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="rWY-bl-20a">
+            <objects>
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="1" id="DMp-Zg-328" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="uPQ-4e-esM"/>
+                        <tabViewItem identifier="" id="pfb-Bf-1Rt"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="yB1-Ib-zri">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="DMp-Zg-328" id="bbh-it-mmX"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="yB1-Ib-zri" id="lTm-Jh-E0h"/>
+                        <segue destination="5Lj-W0-vhx" kind="relationship" relationship="tabItems" id="RZI-ib-T0M"/>
+                        <segue destination="Z1h-Vu-DlF" kind="relationship" relationship="tabItems" id="kz4-p7-CfC"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="sxd-4r-e0i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="331-lX-sa7">
+            <objects>
+                <viewController title="View Controller" id="5Lj-W0-vhx" sceneMemberID="viewController">
+                    <view key="view" id="bA1-rh-24X">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="14C-Kz-pHr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="1047"/>
+        </scene>
+        <!--Sync Preferences-->
+        <scene sceneID="2pD-SI-tdC">
+            <objects>
+                <viewController title="Sync Preferences" id="Z1h-Vu-DlF" sceneMemberID="viewController">
+                    <view key="view" id="wGy-f2-29M" customClass="SyncPreferencesView" customModule="Pay_Cheques" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efD-Fo-5eZ">
+                                <rect key="frame" x="325" y="225" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lvz-wO-aFY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="5za-ha-gq8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="1047"/>
+        </scene>
+    </scenes>
+</document>
