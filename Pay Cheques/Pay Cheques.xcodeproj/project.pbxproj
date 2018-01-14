@@ -16,6 +16,7 @@
 		62A9E79A200BB07D007FF418 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A9E799200BB07D007FF418 /* Alamofire.framework */; };
 		62A9E79B200BB07D007FF418 /* Alamofire.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 62A9E799200BB07D007FF418 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A9E79E200BB12C007FF418 /* SwiftyDropbox.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62A9E79D200BB12C007FF418 /* SwiftyDropbox.framework.dSYM */; };
+		62A9E7A4200BB6CD007FF418 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		62A9E796200BB06D007FF418 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
 		62A9E799200BB07D007FF418 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		62A9E79D200BB12C007FF418 /* SwiftyDropbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyDropbox.framework.dSYM; path = Carthage/Build/Mac/SwiftyDropbox.framework.dSYM; sourceTree = "<group>"; };
+		62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				62A9E784200BAFFC007FF418 /* ViewController.swift */,
 				62A9E786200BAFFC007FF418 /* Assets.xcassets */,
 				62A9E788200BAFFC007FF418 /* Main.storyboard */,
+				62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */,
 				62A9E78B200BAFFC007FF418 /* Info.plist */,
 				62A9E78C200BAFFC007FF418 /* Pay_Cheques.entitlements */,
 			);
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A9E7A4200BB6CD007FF418 /* Preferences.storyboard in Resources */,
 				62A9E787200BAFFC007FF418 /* Assets.xcassets in Resources */,
 				62A9E78A200BAFFC007FF418 /* Main.storyboard in Resources */,
 			);
