@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		623A5AF3200BBCEA0068FD31 /* SyncPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */; };
+		623A5AF8200BEFBB0068FD31 /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A5AF7200BEFBB0068FD31 /* AlertBox.swift */; };
+		623A5B02200C8D560068FD31 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */; };
+		623A5B03200C8D560068FD31 /* SwiftyDropbox.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A9E783200BAFFC007FF418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9E782200BAFFC007FF418 /* AppDelegate.swift */; };
 		62A9E785200BAFFC007FF418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9E784200BAFFC007FF418 /* ViewController.swift */; };
 		62A9E787200BAFFC007FF418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A9E786200BAFFC007FF418 /* Assets.xcassets */; };
 		62A9E78A200BAFFC007FF418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A9E788200BAFFC007FF418 /* Main.storyboard */; };
-		62A9E797200BB06E007FF418 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A9E796200BB06D007FF418 /* SwiftyDropbox.framework */; };
-		62A9E798200BB06E007FF418 /* SwiftyDropbox.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 62A9E796200BB06D007FF418 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A9E79A200BB07D007FF418 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A9E799200BB07D007FF418 /* Alamofire.framework */; };
 		62A9E79B200BB07D007FF418 /* Alamofire.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 62A9E799200BB07D007FF418 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A9E79E200BB12C007FF418 /* SwiftyDropbox.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62A9E79D200BB12C007FF418 /* SwiftyDropbox.framework.dSYM */; };
 		62A9E7A4200BB6CD007FF418 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */; };
+		62BD2B7B200D16650078BD2A /* CreditCardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B7A200D16650078BD2A /* CreditCardEdit.swift */; };
+		62BD2B7E200DF4490078BD2A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B7D200DF4490078BD2A /* Currency.swift */; };
+		62BD2B82200E05280078BD2A /* CurrencyListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B81200E05280078BD2A /* CurrencyListWidget.swift */; };
+		62BD2B87200E0EDE0078BD2A /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */; };
+		62BD2B8C200E1D460078BD2A /* SyncFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */; };
+		62BD2B8F200E20B70078BD2A /* SyncFileWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				62A9E798200BB06E007FF418 /* SwiftyDropbox.framework in Embed Libraries */,
+				623A5B03200C8D560068FD31 /* SwiftyDropbox.framework in Embed Libraries */,
 				62A9E79B200BB07D007FF418 /* Alamofire.framework in Embed Libraries */,
 			);
 			name = "Embed Libraries";
@@ -47,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncPreferencesViewController.swift; sourceTree = "<group>"; };
+		623A5AF7200BEFBB0068FD31 /* AlertBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
+		623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
 		62A9E77F200BAFFC007FF418 /* Pay Cheques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Cheques.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A9E782200BAFFC007FF418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A9E784200BAFFC007FF418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +64,15 @@
 		62A9E78B200BAFFC007FF418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A9E78C200BAFFC007FF418 /* Pay_Cheques.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pay_Cheques.entitlements; sourceTree = "<group>"; };
 		62A9E792200BB018007FF418 /* Pay Cheques.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pay Cheques.entitlements"; sourceTree = "<group>"; };
-		62A9E793200BB068007FF418 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = Alamofire; path = Carthage/Build/Mac/Alamofire.framework/Alamofire; sourceTree = "<group>"; };
-		62A9E796200BB06D007FF418 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
 		62A9E799200BB07D007FF418 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		62A9E79D200BB12C007FF418 /* SwiftyDropbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyDropbox.framework.dSYM; path = Carthage/Build/Mac/SwiftyDropbox.framework.dSYM; sourceTree = "<group>"; };
 		62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		62BD2B7A200D16650078BD2A /* CreditCardEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardEdit.swift; sourceTree = "<group>"; };
+		62BD2B7D200DF4490078BD2A /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		62BD2B81200E05280078BD2A /* CurrencyListWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListWidget.swift; sourceTree = "<group>"; };
+		62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncFileViewController.swift; sourceTree = "<group>"; };
+		62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SyncFileWindow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A9E797200BB06E007FF418 /* SwiftyDropbox.framework in Frameworks */,
+				623A5B02200C8D560068FD31 /* SwiftyDropbox.framework in Frameworks */,
 				62A9E79A200BB07D007FF418 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,13 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		623A5AF6200BEFA90068FD31 /* Independent Classes */ = {
+			isa = PBXGroup;
+			children = (
+				623A5AF7200BEFBB0068FD31 /* AlertBox.swift */,
+				62BD2B7D200DF4490078BD2A /* Currency.swift */,
+				62BD2B81200E05280078BD2A /* CurrencyListWidget.swift */,
+			);
+			path = "Independent Classes";
+			sourceTree = "<group>";
+		};
 		62A9E776200BAFFC007FF418 = {
 			isa = PBXGroup;
 			children = (
+				623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */,
 				62A9E79D200BB12C007FF418 /* SwiftyDropbox.framework.dSYM */,
 				62A9E799200BB07D007FF418 /* Alamofire.framework */,
-				62A9E796200BB06D007FF418 /* SwiftyDropbox.framework */,
-				62A9E793200BB068007FF418 /* Alamofire */,
 				62A9E781200BAFFC007FF418 /* Pay Cheques */,
 				62A9E780200BAFFC007FF418 /* Products */,
 			);
@@ -98,17 +120,30 @@
 		62A9E781200BAFFC007FF418 /* Pay Cheques */ = {
 			isa = PBXGroup;
 			children = (
+				623A5AF6200BEFA90068FD31 /* Independent Classes */,
 				62A9E792200BB018007FF418 /* Pay Cheques.entitlements */,
 				62A9E782200BAFFC007FF418 /* AppDelegate.swift */,
 				62A9E784200BAFFC007FF418 /* ViewController.swift */,
 				62A9E786200BAFFC007FF418 /* Assets.xcassets */,
 				62A9E788200BAFFC007FF418 /* Main.storyboard */,
-				62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */,
-				623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */,
+				62BD2B83200E0EAC0078BD2A /* Preferences */,
 				62A9E78B200BAFFC007FF418 /* Info.plist */,
 				62A9E78C200BAFFC007FF418 /* Pay_Cheques.entitlements */,
+				62BD2B7A200D16650078BD2A /* CreditCardEdit.swift */,
 			);
 			path = "Pay Cheques";
+			sourceTree = "<group>";
+		};
+		62BD2B83200E0EAC0078BD2A /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */,
+				623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */,
+				62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */,
+				62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */,
+				62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 				62A9E77D200BAFFC007FF418 /* Resources */,
 				62A9E795200BB069007FF418 /* Embed Libraries */,
 				62A9E79C200BB112007FF418 /* CopyFiles */,
+				623A5AF9200C8BA70068FD31 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -148,10 +184,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -186,18 +222,42 @@
 				62A9E7A4200BB6CD007FF418 /* Preferences.storyboard in Resources */,
 				62A9E787200BAFFC007FF418 /* Assets.xcassets in Resources */,
 				62A9E78A200BAFFC007FF418 /* Main.storyboard in Resources */,
+				62BD2B8F200E20B70078BD2A /* SyncFileWindow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623A5AF9200C8BA70068FD31 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62A9E77B200BAFFC007FF418 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62BD2B8C200E1D460078BD2A /* SyncFileViewController.swift in Sources */,
+				62BD2B7E200DF4490078BD2A /* Currency.swift in Sources */,
+				623A5AF8200BEFBB0068FD31 /* AlertBox.swift in Sources */,
 				62A9E785200BAFFC007FF418 /* ViewController.swift in Sources */,
 				62A9E783200BAFFC007FF418 /* AppDelegate.swift in Sources */,
+				62BD2B7B200D16650078BD2A /* CreditCardEdit.swift in Sources */,
+				62BD2B87200E0EDE0078BD2A /* PreferencesWindowController.swift in Sources */,
+				62BD2B82200E05280078BD2A /* CurrencyListWidget.swift in Sources */,
 				623A5AF3200BBCEA0068FD31 /* SyncPreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -277,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

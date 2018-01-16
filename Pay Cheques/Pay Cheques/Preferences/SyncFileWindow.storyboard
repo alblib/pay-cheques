@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="WAa-q6-qEn">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="bWO-UT-xKE">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="WAa-q6-qEn" sceneMemberID="viewController">
+                    <window key="window" title="File System and Sync Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="b7i-Zh-MoR">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="WAa-q6-qEn" id="l5l-Es-5iR"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="Uf4-3u-rfK" kind="relationship" relationship="window.shadowedContentViewController" id="BrT-Xg-cq4"/>
+                    </connections>
+                </windowController>
+                <customObject id="sYI-6O-DBe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="30"/>
+        </scene>
+        <!--Sync File View Controller-->
+        <scene sceneID="4KI-np-2oY">
+            <objects>
+                <viewController id="Uf4-3u-rfK" customClass="SyncFileViewController" customModule="Pay_Cheques" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Obi-NE-6kL">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg2-il-H1a">
+                                <rect key="frame" x="20" y="228" width="440" height="22"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tne-dN-vGl">
+                                        <rect key="frame" x="-2" y="2" width="108" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Local Save Path: " id="MOV-hn-NQW">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-qW-YJE">
+                                        <rect key="frame" x="112" y="0.0" width="257" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Label" id="cTB-m9-dG0">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OCX-tr-VFd">
+                                        <rect key="frame" x="371" y="-6" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Llb-Pq-lPc">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Tne-dN-vGl" secondAttribute="bottom" constant="2" id="yij-1P-gQa"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cg2-il-H1a" secondAttribute="trailing" constant="20" id="FGv-zh-G5B"/>
+                            <constraint firstItem="cg2-il-H1a" firstAttribute="leading" secondItem="Obi-NE-6kL" secondAttribute="leading" constant="20" id="NkB-9Q-CZk"/>
+                            <constraint firstItem="cg2-il-H1a" firstAttribute="top" secondItem="Obi-NE-6kL" secondAttribute="top" constant="20" id="asf-f7-AqV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="QuZ-wv-VCd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customFormatter id="FqV-GY-y2r"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="550"/>
+        </scene>
+    </scenes>
+</document>
