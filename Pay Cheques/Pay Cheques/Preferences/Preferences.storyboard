@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="mqI-4l-4lb">
     <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="13752"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
@@ -18,18 +20,87 @@
                             <outlet property="delegate" destination="mqI-4l-4lb" id="YY3-ar-qaI"/>
                         </connections>
                     </window>
+                    <touchBar key="touchBar" id="fqZ-vn-rdo">
+                        <touchBarItems>
+                            <touchBarItem id="U1i-jD-iie">
+                                <viewController key="viewController" id="ze1-Jd-ifO">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-Fc-642">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSStopProgressTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9rV-67-PeT">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="closeWindow:" target="mqI-4l-4lb" id="8fT-vd-dDZ"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="HX3-L8-8Tx">
+                                <viewController key="viewController" id="drb-fd-2s4">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-zu-E77" userLabel="Shift to Home">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hKX-gM-PwC">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showMainWindow:" target="mqI-4l-4lb" id="cha-Qx-F8R"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFixedSpaceSmall" id="cpf-pw-sSy"/>
+                            <touchBarItem id="lZd-TM-542">
+                                <viewController key="viewController" id="Mdf-52-ZFk">
+                                    <textField key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j9O-bn-lhw">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="24"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="Preferences:" drawsBackground="YES" id="fsG-uG-bKN">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </viewController>
+                                <size key="designTimeSize" width="98" height="24"/>
+                            </touchBarItem>
+                            <touchBarItem id="jxd-ee-ZJw">
+                                <viewController key="viewController" id="v5h-ba-7s5">
+                                    <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-lr-LyU">
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="DFC-oB-Lri">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="Display" width="103"/>
+                                                <segment label="Payment" width="102" selected="YES" tag="1"/>
+                                                <segment label="Sync" width="103"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <color key="selectedSegmentBezelColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="tabTouchBar:" target="mqI-4l-4lb" id="Js2-cR-gWy"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
+                        <outlet property="tabTouchBar" destination="rS0-lr-LyU" id="VdC-lH-qac"/>
                         <segue destination="1Kt-1O-m52" kind="relationship" relationship="window.shadowedContentViewController" id="dCD-LP-aYS"/>
                     </connections>
                 </windowController>
                 <customObject id="Xc8-Ea-PcK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="-686"/>
+            <point key="canvasLocation" x="52" y="-795"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Preferences Tab View Controller-->
         <scene sceneID="w6w-Wt-rZ4">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="1Kt-1O-m52" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="1Kt-1O-m52" customClass="PreferencesTabViewController" customModule="Pay_Cheques" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="dUQ-pf-TRz"/>
                         <tabViewItem identifier="" id="Yi4-aB-Cjm"/>
@@ -383,4 +454,8 @@
             <point key="canvasLocation" x="-645" y="913"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
+        <image name="NSStopProgressTemplate" width="11" height="11"/>
+    </resources>
 </document>

@@ -29,33 +29,27 @@ class IOVariable{
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    @IBOutlet weak var applicationTouchBar : NSTouchBar!
     
-    
-    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        if !flag{
-            let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-            let controller = sb.instantiateInitialController() as! NSWindowController
-            
-            controller.window?.makeKeyAndOrderFront(self)
-            //self.window = controller.window
-        }
-        
-        return true
-    }
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        // make image template
+        #imageLiteral(resourceName: "touch-up").isTemplate = true
+        #imageLiteral(resourceName: "touch-left").isTemplate = true
+        
+        // Set up application touch bar
+        NSApplication.shared.touchBar = applicationTouchBar
+        
+        // Set up dropbox authentication handler.
         DropboxClientsManager.setupWithAppKeyDesktop(IOVariable.dropboxAppKey)
         NSAppleEventManager.shared().setEventHandler(self,
                                                      andSelector: #selector(handleGetURLEvent),
                                                      forEventClass: AEEventClass(kInternetEventClass),
                                                      andEventID: AEEventID(kAEGetURL))
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
+    
+    /** This handler opens Safari for Dropbox authentication when authentication request is called.*/
     @objc func handleGetURLEvent(_ event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
         if let aeEventDescriptor = event?.paramDescriptor(forKeyword: AEKeyword(keyDirectObject)) {
             if let urlStr = aeEventDescriptor.stringValue {
@@ -75,6 +69,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 NSApp.activate(ignoringOtherApps: true)
             }
         }
+    }
+    
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
+
+    /** This function handles to reopen main window when dock icon is clicked. */
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        for window in sender.windows {
+            if (window.delegate?.isKind(of: MainWindowController.self)) == true {
+                window.makeKeyAndOrderFront(self)
+            }else{
+                window.orderFront(self)
+            }
+        }
+        return true
+    }
+    @IBAction func restoreWindows(touchbarButton: NSButton){
+        applicationShouldHandleReopen(NSApplication.shared, hasVisibleWindows: false)
+    }
+    @IBAction func restoreWindows(dockBarMenu: NSMenuItem){
+        applicationShouldHandleReopen(NSApplication.shared, hasVisibleWindows: false)
+    }
+    @IBAction func terminate(touchbarButton: NSButton){
+        NSApplication.shared.terminate(self)
     }
 }
 

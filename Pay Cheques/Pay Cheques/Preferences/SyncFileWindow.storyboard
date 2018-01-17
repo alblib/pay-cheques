@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="WAa-q6-qEn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.automator.AutomatorPalette" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -76,6 +77,15 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <amPathPopUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" canChooseDirectories="YES" canChooseExistingPaths="YES" displayPanelAsSheet="YES" showStandardPaths="YES" placeholder="~/Library" translatesAutoresizingMaskIntoConstraints="NO" id="TGB-CJ-MD6">
+                                <rect key="frame" x="191" y="161" width="184" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <amVariablePopUpButtonCell key="cell" type="push" title="Desktop" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1001" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="og4-cz-11j">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <menu key="menu" title="OtherViews" id="YCA-4N-Y6r"/>
+                                </amVariablePopUpButtonCell>
+                            </amPathPopUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cg2-il-H1a" secondAttribute="trailing" constant="20" id="FGv-zh-G5B"/>

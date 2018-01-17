@@ -25,6 +25,8 @@
 		62BD2B87200E0EDE0078BD2A /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */; };
 		62BD2B8C200E1D460078BD2A /* SyncFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */; };
 		62BD2B8F200E20B70078BD2A /* SyncFileWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */; };
+		62D3FE2D200F78BD003FCCEB /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D3FE2C200F78BD003FCCEB /* MainWindowController.swift */; };
+		62D3FE31200FCB8D003FCCEB /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D3FE30200FCB8D003FCCEB /* PreferencesTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +75,8 @@
 		62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncFileViewController.swift; sourceTree = "<group>"; };
 		62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SyncFileWindow.storyboard; sourceTree = "<group>"; };
+		62D3FE2C200F78BD003FCCEB /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		62D3FE30200FCB8D003FCCEB /* PreferencesTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				623A5AF6200BEFA90068FD31 /* Independent Classes */,
 				62A9E792200BB018007FF418 /* Pay Cheques.entitlements */,
 				62A9E782200BAFFC007FF418 /* AppDelegate.swift */,
+				62D3FE2C200F78BD003FCCEB /* MainWindowController.swift */,
 				62A9E784200BAFFC007FF418 /* ViewController.swift */,
 				62A9E786200BAFFC007FF418 /* Assets.xcassets */,
 				62A9E788200BAFFC007FF418 /* Main.storyboard */,
@@ -138,8 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */,
-				623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */,
 				62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */,
+				62D3FE30200FCB8D003FCCEB /* PreferencesTabViewController.swift */,
+				623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */,
 				62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */,
 				62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */,
 			);
@@ -251,12 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				62BD2B8C200E1D460078BD2A /* SyncFileViewController.swift in Sources */,
+				62D3FE31200FCB8D003FCCEB /* PreferencesTabViewController.swift in Sources */,
 				62BD2B7E200DF4490078BD2A /* Currency.swift in Sources */,
 				623A5AF8200BEFBB0068FD31 /* AlertBox.swift in Sources */,
 				62A9E785200BAFFC007FF418 /* ViewController.swift in Sources */,
 				62A9E783200BAFFC007FF418 /* AppDelegate.swift in Sources */,
 				62BD2B7B200D16650078BD2A /* CreditCardEdit.swift in Sources */,
 				62BD2B87200E0EDE0078BD2A /* PreferencesWindowController.swift in Sources */,
+				62D3FE2D200F78BD003FCCEB /* MainWindowController.swift in Sources */,
 				62BD2B82200E05280078BD2A /* CurrencyListWidget.swift in Sources */,
 				623A5AF3200BBCEA0068FD31 /* SyncPreferencesViewController.swift in Sources */,
 			);
