@@ -1,2 +1,6 @@
 # SwiftyDropbox
 github "https://github.com/dropbox/SwiftyDropbox" ~> 4.3.0
+# KeychainAccess
+github "kishikawakatsumi/KeychainAccess"
+
+github "ReactiveCocoa/ReactiveSwift" ~> 3.0
