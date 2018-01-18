@@ -14,6 +14,6 @@ class PreferencesTabViewController: NSTabViewController{
         tabTouchBar = segment
     }
     override func tabView(_ tabView: NSTabView, didSelect tabViewItem: NSTabViewItem?) {
-        tabTouchBar?.selectedSegment = (tabView.indexOfTabViewItem(tabViewItem!))
+        tabTouchBar?.selectedSegment = tabView.indexOfTabViewItem(tabViewItem!)
     }
 }
