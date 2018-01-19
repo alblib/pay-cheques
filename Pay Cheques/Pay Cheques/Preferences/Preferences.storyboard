@@ -76,8 +76,11 @@
                         </touchBarItems>
                     </touchBar>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="subTouchBarGroup" destination="aJC-fN-U7H" id="VRH-s8-F17"/>
                         <outlet property="touchBarTabControl" destination="rS0-lr-LyU" id="t3c-5J-CBo"/>
+=======
+>>>>>>> df306abdd8da77c8d00fa01388ec8c49148bb2c8
                         <segue destination="1Kt-1O-m52" kind="relationship" relationship="window.shadowedContentViewController" id="dCD-LP-aYS"/>
                     </connections>
                 </windowController>
@@ -432,6 +435,32 @@
                             </scrollView>
                         </subviews>
                     </view>
+<<<<<<< HEAD
+=======
+                    <touchBar key="touchBar" principalItem="cNB-0q-IWR" id="OH9-wX-9Vd">
+                        <touchBarItems>
+                            <touchBarItem identifier="pref_pay_tabtouch" id="cNB-0q-IWR">
+                                <viewController key="viewController" id="MK8-af-2eX">
+                                    <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yIw-vQ-kIH">
+                                        <rect key="frame" x="0.0" y="0.0" width="4" height="3"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Ga7-HQ-i0J">
+                                            <font key="font" metaFont="system" size="18"/>
+                                            <segments>
+                                                <segment label="$" width="72"/>
+                                                <segment label="💳" width="72" selected="YES" tag="1"/>
+                                                <segment label="" width="72"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="touchBarActionWithTab:" target="gm2-vp-zc2" id="kt8-kX-kdh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
+>>>>>>> df306abdd8da77c8d00fa01388ec8c49148bb2c8
                     <connections>
                         <outlet property="childTabView" destination="QMa-tA-Axh" id="V8p-pJ-nRY"/>
                         <outlet property="subTouchBar" destination="OH9-wX-9Vd" id="4df-jo-rM4"/>
@@ -520,6 +549,58 @@
                             <constraint firstAttribute="trailing" secondItem="7VJ-Hr-14q" secondAttribute="trailing" constant="20" id="umY-tq-mqe"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+=======
+                    <touchBar key="touchBar" id="JTw-aE-2F1">
+                        <touchBarItems>
+                            <touchBarItem id="c9Z-4a-nbb">
+                                <viewController key="viewController" id="NUU-Ab-rkr">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xgW-Z8-xfm">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarFolderTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vkb-8Q-hoF">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="DbG-am-SW8">
+                                <viewController key="viewController" id="ltK-w1-ttd">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-U9-iuC">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="dropbox" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mqU-Y9-9wx">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="dropboxAuthorizationWithTouchbarButton:" target="ubW-UF-9yX" id="6ip-6w-E7r"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="wid-pY-x93">
+                                <viewController key="viewController" id="7aS-w2-ICN">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1nO-yJ-Fby">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ek0-y5-kM4">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <color key="bezelColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
+>>>>>>> df306abdd8da77c8d00fa01388ec8c49148bb2c8
                     <connections>
                         <outlet property="dropboxButton" destination="mFV-MB-jhC" id="SBM-f2-jYL"/>
                         <outlet property="dropboxNameField" destination="3xI-ks-war" id="clz-j5-CQ6"/>
@@ -582,7 +663,11 @@
         <!--Display Preferences-->
         <scene sceneID="TdM-Qc-Mu1">
             <objects>
+<<<<<<< HEAD
                 <viewController title="Display Preferences" id="Dp8-uc-lxV" customClass="DisplayPrefViewController" customModule="Pay_Cheques" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController title="Display Preferences" id="Dp8-uc-lxV" customClass="PrefDisplayViewController" customModule="Pay_Cheques" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> df306abdd8da77c8d00fa01388ec8c49148bb2c8
                     <view key="view" id="c6g-N3-sm0">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -700,6 +785,68 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <touchBar key="touchBar" id="uQy-La-SJE">
+                        <touchBarItems>
+                            <touchBarItem id="Ult-HP-uYa">
+                                <viewController key="viewController" id="pwV-0R-LMI">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-FX-LHy">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSActionTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="ifM-xh-WtH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="bezelColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem identifier="pref_tabtouch" id="hm9-TO-XrW">
+                                <viewController key="viewController" id="Rc2-l6-cjD">
+                                    <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-uA-K4b">
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="8l8-oo-MV3">
+                                            <font key="font" metaFont="system" size="14"/>
+                                            <segments>
+                                                <segment label="Display" width="75"/>
+                                                <segment label="Payment" width="75" selected="YES" tag="1"/>
+                                                <segment label="Sync" width="75"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <color key="selectedSegmentBezelColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="touchBarTabChangedWithTabControl:" target="mqI-4l-4lb" id="CNj-86-rdb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="hd4-SE-Cgc"/>
+                            <touchBarGroupItem identifier="pref_submenu" id="qgu-ll-6nI">
+                                <touchBar key="groupTouchBar" id="IMA-UU-9oS">
+                                    <nil name="touchBarItems"/>
+                                </touchBar>
+                            </touchBarGroupItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFixedSpaceLarge" id="RXU-AQ-1rz"/>
+                            <touchBarItem id="XDx-k5-wUy">
+                                <viewController key="viewController" id="bDJ-Qv-XBU">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="udY-4M-tOp">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSHomeTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WZS-HV-W0b">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showMainWindow:" target="mqI-4l-4lb" id="6m1-qM-mxB"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
+                    <connections>
+                        <outlet property="touchbarMainTabs" destination="oU2-uA-K4b" id="3D5-KT-mdh"/>
+                    </connections>
                 </viewController>
                 <customObject id="rhE-gK-2m7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

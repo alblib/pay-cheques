@@ -19,5 +19,24 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+<<<<<<< HEAD
+=======
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pay Cheques/Preferences/PreferencesWindowController.swift"
+            timestampString = "538052299.8577009"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "subTouchBarGroup"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+>>>>>>> df306abdd8da77c8d00fa01388ec8c49148bb2c8
    </Breakpoints>
 </Bucket>
