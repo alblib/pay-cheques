@@ -37,6 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // make image template
         #imageLiteral(resourceName: "touch-up").isTemplate = true
         #imageLiteral(resourceName: "touch-left").isTemplate = true
+        #imageLiteral(resourceName: "dropbox").isTemplate = true
         
         // Set up application touch bar
         NSApplication.shared.touchBar = applicationTouchBar
@@ -74,23 +75,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    /** This function handles to reopen main window and other opened windows. */
+    func restoreWindows(){
+        for window in NSApplication.shared.windows {
+            if (window.delegate?.isKind(of: MainWindowController.self)) == true {
+                //window.makeKeyAndOrderFront(self)
+                window.orderFront(self)
+            }else if (window.isVisible){
+                window.orderFront(self)
+            }
+        }
+    }
 
-    /** This function handles to reopen main window when dock icon is clicked. */
+    /** This function handles to reopen main window and other opened windows when dock icon is clicked. */
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         for window in sender.windows {
             if (window.delegate?.isKind(of: MainWindowController.self)) == true {
-                window.makeKeyAndOrderFront(self)
-            }else{
+                flag ? window.orderFront(self) : window.makeKeyAndOrderFront(self)
+            }else if (window.isVisible){
                 window.orderFront(self)
             }
         }
         return true
     }
+    
+    /** This function handles to reopen main window and other opened windows. Signal should be sent from touch bar button. */
     @IBAction func restoreWindows(touchbarButton: NSButton){
-        applicationShouldHandleReopen(NSApplication.shared, hasVisibleWindows: false)
+        restoreWindows()
     }
     @IBAction func restoreWindows(dockBarMenu: NSMenuItem){
-        applicationShouldHandleReopen(NSApplication.shared, hasVisibleWindows: false)
+        restoreWindows()
     }
     @IBAction func terminate(touchbarButton: NSButton){
         NSApplication.shared.terminate(self)

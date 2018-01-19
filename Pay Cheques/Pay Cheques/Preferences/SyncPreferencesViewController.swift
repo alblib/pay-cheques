@@ -67,4 +67,7 @@ class SyncPreferencesViewController: NSViewController{
             UserDefaults.standard.set("none", forKey: "DropboxStatus")
         }
     }
+    @IBAction func dropboxAuthorization(touchbarButton : NSButton) {
+        dropboxAuthorization(sender: touchbarButton)
+    }
 }

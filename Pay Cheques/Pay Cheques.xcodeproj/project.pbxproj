@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621568732011AE5000DE4CB9 /* PayPrefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621568722011AE5000DE4CB9 /* PayPrefViewController.swift */; };
 		623A5AF3200BBCEA0068FD31 /* SyncPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */; };
 		623A5AF8200BEFBB0068FD31 /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A5AF7200BEFBB0068FD31 /* AlertBox.swift */; };
 		623A5B02200C8D560068FD31 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		621568722011AE5000DE4CB9 /* PayPrefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPrefViewController.swift; sourceTree = "<group>"; };
 		623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncPreferencesViewController.swift; sourceTree = "<group>"; };
 		623A5AF7200BEFBB0068FD31 /* AlertBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
 		623A5AFA200C8CEF0068FD31 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				62A9E7A3200BB6CD007FF418 /* Preferences.storyboard */,
 				62BD2B86200E0EDE0078BD2A /* PreferencesWindowController.swift */,
 				62D3FE30200FCB8D003FCCEB /* PreferencesTabViewController.swift */,
+				621568722011AE5000DE4CB9 /* PayPrefViewController.swift */,
 				623A5AF2200BBCEA0068FD31 /* SyncPreferencesViewController.swift */,
 				62BD2B8A200E1D460078BD2A /* SyncFileViewController.swift */,
 				62BD2B8E200E20B70078BD2A /* SyncFileWindow.storyboard */,
@@ -260,6 +263,7 @@
 				62D3FE31200FCB8D003FCCEB /* PreferencesTabViewController.swift in Sources */,
 				62BD2B7E200DF4490078BD2A /* Currency.swift in Sources */,
 				623A5AF8200BEFBB0068FD31 /* AlertBox.swift in Sources */,
+				621568732011AE5000DE4CB9 /* PayPrefViewController.swift in Sources */,
 				62A9E785200BAFFC007FF418 /* ViewController.swift in Sources */,
 				62A9E783200BAFFC007FF418 /* AppDelegate.swift in Sources */,
 				62BD2B7B200D16650078BD2A /* CreditCardEdit.swift in Sources */,

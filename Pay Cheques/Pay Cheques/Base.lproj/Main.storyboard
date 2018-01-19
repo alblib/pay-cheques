@@ -776,24 +776,24 @@
                         <touchBarItems>
                             <touchBarItem id="wtx-IO-X0v">
                                 <viewController key="viewController" id="ymi-Zn-hMx">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-Tc-hOa">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="41"/>
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-Tc-hOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="$" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vde-Wv-39l">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <font key="font" metaFont="system" size="16"/>
                                         </buttonCell>
                                     </button>
                                 </viewController>
                             </touchBarItem>
                             <touchBarItem id="lrA-vz-lll">
                                 <viewController key="viewController" id="TmT-jM-OCy">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evB-YK-7F4">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="41"/>
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="evB-YK-7F4">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="💳" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nQ3-sx-oTY">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <font key="font" metaFont="system" size="16"/>
                                         </buttonCell>
                                     </button>
                                 </viewController>
@@ -803,8 +803,8 @@
                             <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="GsV-Mb-iVO"/>
                             <touchBarItem id="ZK5-MA-07E">
                                 <viewController key="viewController" id="ijy-l1-6ME">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSi-4f-rf4">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="41"/>
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SSi-4f-rf4">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSSmartBadgeTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Sow-Kh-2W1">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
