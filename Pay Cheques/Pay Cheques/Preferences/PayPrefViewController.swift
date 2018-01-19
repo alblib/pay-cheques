@@ -10,11 +10,12 @@
 import Cocoa
 
 class PayPrefViewController: NSViewController, NSTabViewDelegate {
-    @IBOutlet weak var childTabView: NSTabView!
+    @IBOutlet weak var childTabView: NSTabView!/*
     private var touchBarTabControl: NSSegmentedControl!{
         let item = touchBar?.item(forIdentifier: NSTouchBarItem.Identifier(rawValue: "pref_pay_tabtouch"))
         return item?.view as! NSSegmentedControl
-    }
+    }*/
+    @IBOutlet weak var touchBarTabControl: NSSegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@
 import Cocoa
 
 class PreferencesTabViewController: NSTabViewController{
-    var parentWindowController: PreferencesWindowController!
+    var parentWindowController: PrefWindowController!
     var currentViewController: NSViewController?{
         return tabViewItems[selectedTabViewItemIndex].viewController
     }

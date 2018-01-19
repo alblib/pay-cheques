@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PreferencesWindowController: NSWindowController {
+class PrefWindowController: NSWindowController {
     //@IBOutlet weak var tabTouchBar: NSSegmentedControl!
     
     private var touchBarTabControl: NSSegmentedControl!{
