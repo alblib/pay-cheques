@@ -9,7 +9,7 @@
 import Cocoa
 import SwiftyDropbox
 
-class SyncPreferencesViewController: NSViewController{
+class SyncPrefViewController: PrefTabChildViewController{
     let dropboxNameFieldDefault: String = NSLocalizedString("User Authorization required", comment: "")
     @IBOutlet weak var dropboxNameField: NSTextField!
     @IBOutlet weak var dropboxButton: NSButton!
