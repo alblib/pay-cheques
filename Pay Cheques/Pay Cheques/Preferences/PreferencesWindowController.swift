@@ -9,7 +9,6 @@
 import Cocoa
 
 class PreferencesWindowController: NSWindowController {
-    //@IBOutlet weak var tabTouchBar: NSSegmentedControl!
     
     private var touchBarTabControl: NSSegmentedControl!{
         let item = touchBar?.item(forIdentifier: NSTouchBarItem.Identifier(rawValue: "pref_tabtouch"))
@@ -20,10 +19,7 @@ class PreferencesWindowController: NSWindowController {
         return touchBar?.item(forIdentifier: NSTouchBarItem.Identifier(rawValue: "pref_submenu")) as! NSGroupTouchBarItem!
     }
     
-    //@IBOutlet weak var touchBarTabControl: NSSegmentedControl!
-    //@IBOutlet weak var subTouchBarGroup: NSGroupTouchBarItem!
-    
-    var subTouchBar: NSTouchBar!{//NSGroupTouchBarItem! {
+    var subTouchBar: NSTouchBar!{
         get{
             return subTouchBarGroup?.groupTouchBar
         }
