@@ -40,14 +40,14 @@ func throwException(nilObject: String) throws{
     try? throwException(nilObject + " is not initialized.")
 }
 
-func yesNoQuestionBox(message: String, description: String){
+func yesNoQuestionBox(message: String, description: String) -> Bool{
     let alert = NSAlert()
     alert.messageText = message
     alert.informativeText = description
     alert.alertStyle = .informational
-    alert.addButton(withTitle: NSLocalizedString("No", comment: ""))
     alert.addButton(withTitle: NSLocalizedString("Yes", comment: ""))
-    alert.runModal()
+    alert.addButton(withTitle: NSLocalizedString("No", comment: ""))
+    return alert.runModal() == .alertFirstButtonReturn
 }
 /*
 func NotOptional(_ object: Any?) throws -> Any {

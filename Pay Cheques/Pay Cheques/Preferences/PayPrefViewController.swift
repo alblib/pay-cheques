@@ -10,17 +10,13 @@
 import Cocoa
 
 class PayPrefViewController: PrefTabChildViewController, NSTabViewDelegate {
-    @IBOutlet weak var childTabView: NSTabView!/*
-    private var touchBarTabControl: NSSegmentedControl!{
-        let item = touchBar?.item(forIdentifier: NSTouchBarItem.Identifier(rawValue: "pref_pay_tabtouch"))
-        return item?.view as! NSSegmentedControl
-    }*/
-    @IBOutlet weak var touchBarTabControl: NSSegmentedControl!
+    @IBOutlet weak var childTabView: NSTabView!
+    @IBOutlet var touchBarTabControl: NSSegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        try? NotOptional(touchBarTabControl, comment: "PayPrefViewController(self).touchBarTabControl").selectedSegment = childTabView.indexOfTabViewItem(childTabView.selectedTabViewItem!)
+        touchBarTabControl!.selectedSegment = childTabView.indexOfTabViewItem(childTabView.selectedTabViewItem!)
     }
     
     func tabView(_ tabView: NSTabView, didSelect tabViewItem: NSTabViewItem?) {

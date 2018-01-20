@@ -80,23 +80,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func restoreWindows(){
         for window in NSApplication.shared.windows {
             if (window.delegate?.isKind(of: MainWindowController.self)) == true {
-                //window.makeKeyAndOrderFront(self)
+                window.isVisible ? window.orderFront(self) : window.makeKeyAndOrderFront(self)
+            }else if (window.isVisible || window.isMiniaturized){
                 window.orderFront(self)
-            }else if (window.isVisible){
-                window.orderFront(self)
+            }
+            if(window.isMainWindow){
+                window.makeKey()
             }
         }
     }
 
     /** This function handles to reopen main window and other opened windows when dock icon is clicked. */
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        for window in sender.windows {
-            if (window.delegate?.isKind(of: MainWindowController.self)) == true {
-                flag ? window.orderFront(self) : window.makeKeyAndOrderFront(self)
-            }else if (window.isVisible){
-                window.orderFront(self)
-            }
-        }
+        restoreWindows()
         return true
     }
     
@@ -108,7 +104,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         restoreWindows()
     }
     @IBAction func terminate(touchbarButton: NSButton){
-        NSApplication.shared.terminate(self)
+        if (yesNoQuestionBox(message: "Quit", description: "Do you really want to Quit?")){
+            NSApplication.shared.terminate(self)
+        }
     }
 }
 

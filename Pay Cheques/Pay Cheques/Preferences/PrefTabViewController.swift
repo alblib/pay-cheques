@@ -9,13 +9,15 @@
 import Cocoa
 
 class PrefTabViewController: NSTabViewController{
-    var parentWindowController: PrefWindowController!
+    var parentWindowController: PrefWindowController!{
+        return view.window?.windowController as? PrefWindowController
+    }
     var currentViewController: NSViewController?{
         return tabViewItems[selectedTabViewItemIndex].viewController
     }
     override func tabView(_ tabView: NSTabView, didSelect tabViewItem: NSTabViewItem?) {
         super.tabView(tabView, didSelect: tabViewItem)
         parentWindowController?.touchBarTabControl?.selectedSegment = tabView.indexOfTabViewItem(tabViewItem!)
-        //parentWindowController?.subTouchBar? = (tabViewItem?.viewController as! PrefTabChildViewController).subTouchBar ?? NSTouchBar()
+        parentWindowController?.subTouchBar? = (tabViewItem?.viewController as! PrefTabChildViewController).subTouchBar ?? NSTouchBar()
     }
 }

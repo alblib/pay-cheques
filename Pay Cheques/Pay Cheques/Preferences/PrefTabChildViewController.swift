@@ -9,7 +9,7 @@
 import Cocoa
 
 class PrefTabChildViewController: NSViewController {
-    @IBOutlet weak var subTouchBar: NSTouchBar!
+    @IBOutlet var subTouchBar: NSTouchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "PrefTabViewController.parentWindowC.getter:PrefTabViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.window">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PrefWindowController.touchBarTabChanged(tabControl:):PrefWindowController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tabViewController.currentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AppDelegate.handleGetURLEvent(_:replyEvent:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
